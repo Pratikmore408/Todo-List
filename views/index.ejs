@@ -1,0 +1,42 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Todo App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+    <ul id="todoList" class="note-list">
+      <% todos.forEach((todo, index) => { %>
+        <li>
+          <input type="checkbox" id="todo<%= index %>" class="checkbox">
+          <label for="todo<%= index %>">
+            <span class="note-text"><%= todo.text %></span>
+            <% if (todo.dueDate) { %>
+              <span class="due-date">(Due: <%= todo.dueDate %>)</span>
+            <% } %>
+          </label>
+          <button class="removeButton" data-index="<%= index %>">Remove</button>
+        </li>
+      <% }); %>
+    </ul>
+    <form action="/add" method="post" id="addForm">
+      <input type="text" id="newTodo" name="newTodo" placeholder="Add a new todo" required>
+      <input type="date" id="dueDate" name="dueDate">
+      <button type="submit">Add Todo</button>
+    </form>
+  </div>
+  <script src="/scripts.js"></script>
+</body>
+</html>
+
+
+
+

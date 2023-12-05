@@ -1,0 +1,93 @@
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #797373;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 400px;
+}
+
+header {
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-text {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.due-date {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+}
+
+.removeButton {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.removeButton:hover {
+  background-color: #c0392b;
+}
+
+#addForm {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+  
